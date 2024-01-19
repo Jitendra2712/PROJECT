@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .cs{
+          max-width: 300px;
+          margin: 2rem auto;
+          border: 2px solid black;
+          padding: 2rem;
+          display: block;
+          width: 100%;
+          background-color: brown;
+          color: white;
+         }
+         .btnbtn-primary{
+          background-color: black;
+          color: white;
+          margin: 1rem;
+         }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Add Menu</h1>
+
+    
+    <form method="post" class="cs">
+        {% csrf_token %}
+        <div class="mb-3">
+          <label for="text" class="form-label">Recipe Name:</label><br>
+          
+          <input type="text" class="form-control" name="recipe_name">
+        </div>
+        <div class="mb-3">
+            <label for="text" class="form-label">Price</label><br>
+            <input type="text" class="form-control" name="recipe_price"><br>
+          </div>
+        <button type="submit" class="btnbtn-primary">Submit</button>
+        </form>
+</body>
+</html>
